@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DFE8C4025B5F5E9002C54B9 /* TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE8C3F25B5F5E9002C54B9 /* TestCase.m */; };
 		86459F3A25B5B02500230C76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86459F3925B5B02500230C76 /* main.m */; };
 		86459F4825B5B31400230C76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86459F4725B5B31400230C76 /* main.m */; };
 		86459F5025B5B32900230C76 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 86459F4F25B5B32900230C76 /* Movie.m */; };
@@ -36,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0DFE8C3E25B5F5E9002C54B9 /* TestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCase.h; sourceTree = "<group>"; };
+		0DFE8C3F25B5F5E9002C54B9 /* TestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCase.m; sourceTree = "<group>"; };
 		86459F3625B5B02500230C76 /* Refactoring */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Refactoring; sourceTree = BUILT_PRODUCTS_DIR; };
 		86459F3925B5B02500230C76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86459F4525B5B31400230C76 /* 第一章 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "第一章"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				86459F4725B5B31400230C76 /* main.m */,
+				0DFE8C3E25B5F5E9002C54B9 /* TestCase.h */,
+				0DFE8C3F25B5F5E9002C54B9 /* TestCase.m */,
 				86459F4E25B5B32900230C76 /* Movie.h */,
 				86459F4F25B5B32900230C76 /* Movie.m */,
 				86459F5325B5B3BF00230C76 /* Rental.h */,
@@ -193,6 +198,7 @@
 			files = (
 				86459F5525B5B3BF00230C76 /* Rental.m in Sources */,
 				86459F5025B5B32900230C76 /* Movie.m in Sources */,
+				0DFE8C4025B5F5E9002C54B9 /* TestCase.m in Sources */,
 				86459F4825B5B31400230C76 /* main.m in Sources */,
 				86459F5A25B5B4D800230C76 /* Customer.m in Sources */,
 			);

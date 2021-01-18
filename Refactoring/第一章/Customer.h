@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Customer : NSObject
 
 @property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, copy) NSArray *rentals;
 
 - (instancetype)initWithName:(NSString *)name;
 
 - (void)addRental:(Rental *)rental;
+- (NSArray *)getRentals;
 - (NSString *)statement;
 @end
 

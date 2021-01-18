@@ -9,4 +9,11 @@
 
 @implementation Movie
 
+- (instancetype)initWithTitle:(NSString *)title priceCode:(MovieType)priceCode {
+    self = [super init];
+    _title = title;
+    _priceCode = priceCode;
+    return self;
+}
+
 @end

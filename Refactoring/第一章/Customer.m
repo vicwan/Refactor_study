@@ -7,13 +7,27 @@
 
 #import "Customer.h"
 
+@interface Customer ()
+@property (nonatomic, copy) NSMutableArray *rentals;
+@end
+
 @implementation Customer
 
+- (instancetype)initWithName:(NSString *)name {
+    self = [super init];
+    _name = name;
+    _rentals = [NSMutableArray array];
+    return self;
+}
+
+- (void)addRental:(Rental *)rental {
+    [self.rentals addObject:rental];
+}
 
 - (NSString *)statement {
     double totalAmount = 0;
     int frequentRenterPoints = 0;
-    NSString *result = [NSString stringWithFormat:@"Rental Record for %@\n", self.name];
+    NSString *result = [NSString stringWithFormat:@"\n*****\n\nRental Record for %@\n", self.name];
     
     for (Rental *r in self.rentals) {
         double thisAmount = 0;
@@ -52,7 +66,7 @@
     }
     // add footer lines
     result = [result stringByAppendingFormat:@"Amount owed is %.2f\n", totalAmount];
-    result = [result stringByAppendingFormat:@"You earned %d frequent renter points", frequentRenterPoints];
+    result = [result stringByAppendingFormat:@"You earned %d frequent renter points\n\n*****", frequentRenterPoints];
     return result;
 }
 @end

@@ -9,4 +9,11 @@
 
 @implementation Rental
 
+- (instancetype)initWithMovie:(Movie *)movie daysRented:(NSInteger)daysRented {
+    self = [super init];
+    _movie = movie;
+    _daysRented = daysRented;
+    return self;
+}
+
 @end
