@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSInteger daysRented;
 
 - (instancetype)initWithMovie:(Movie *)movie daysRented:(NSInteger)daysRented;
-
+- (double)getCharge;
 @end
 
 NS_ASSUME_NONNULL_END

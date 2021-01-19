@@ -30,29 +30,6 @@
     NSString *result = [NSString stringWithFormat:@"\n*****\n\nRental Record for %@\n", self.name];
     
     for (Rental *r in self.rentals) {
-        double thisAmount = 0;
-        
-        // determine amounts for each line
-        switch (r.movie.priceCode) {
-            case MovieTypeRegular:
-                thisAmount += 2;
-                if (r.daysRented > 2) {
-                    thisAmount += (r.daysRented - 2) * 1.5;
-                }
-                break;
-            case MovieTypeNewRelease:
-                thisAmount += r.daysRented * 3;
-                break;
-                
-            case MovieTypeChildren:
-                thisAmount += 1.5;
-                if (r.daysRented > 3) {
-                    thisAmount += (r.daysRented - 3) * 1.5;
-                }
-                break;
-            default:
-                break;
-        }
         
         // add frequent renter points
         frequentRenterPoints ++;
@@ -61,12 +38,13 @@
             frequentRenterPoints ++;
         }
         // show figures for this rental
-        result = [result stringByAppendingFormat:@"\t%@\t%.2f\n", r.movie.title, thisAmount];
-        totalAmount += thisAmount;
+        result = [result stringByAppendingFormat:@"\t%@\t%.2f\n", r.movie.title, [r getCharge]];
+        totalAmount += [r getCharge];
     }
     // add footer lines
     result = [result stringByAppendingFormat:@"Amount owed is %.2f\n", totalAmount];
     result = [result stringByAppendingFormat:@"You earned %d frequent renter points\n\n*****", frequentRenterPoints];
     return result;
 }
+
 @end
