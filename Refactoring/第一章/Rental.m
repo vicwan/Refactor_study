@@ -17,33 +17,11 @@
 }
 
 - (double)getCharge {
-    double result = 0;
-    switch (self.movie.priceCode) {
-        case MovieTypeRegular:
-            result += 2;
-            if (self.daysRented > 2) {
-                result += (self.daysRented - 2) * 1.5;
-            }
-            break;
-        case MovieTypeNewRelease:
-            result += self.daysRented * 3;
-            break;
-            
-        case MovieTypeChildren:
-            result += 1.5;
-            if (self.daysRented > 3) {
-                result += (self.daysRented - 3) * 1.5;
-            }
-            break;
-    }
-    return result;
+    return [self.movie getCharge:self.daysRented];
 }
 
 - (int)getFrequentRenterPoints {
-    if (self.movie.priceCode == MovieTypeNewRelease && self.daysRented > 1) {
-        return 2;
-    }
-    return 1;
+    return [self.movie getFrequentRenterPoints:self.daysRented];
 }
 
 @end

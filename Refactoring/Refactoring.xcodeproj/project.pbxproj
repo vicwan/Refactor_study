@@ -13,6 +13,10 @@
 		86459F5025B5B32900230C76 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 86459F4F25B5B32900230C76 /* Movie.m */; };
 		86459F5525B5B3BF00230C76 /* Rental.m in Sources */ = {isa = PBXBuildFile; fileRef = 86459F5425B5B3BF00230C76 /* Rental.m */; };
 		86459F5A25B5B4D800230C76 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 86459F5925B5B4D800230C76 /* Customer.m */; };
+		86CE89A725B9680500C9B376 /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CE89A625B9680500C9B376 /* Price.m */; };
+		86CE89AC25B9683900C9B376 /* ChildrenPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CE89AB25B9683900C9B376 /* ChildrenPrice.m */; };
+		86CE89B125B9684300C9B376 /* NewReleasePrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CE89B025B9684300C9B376 /* NewReleasePrice.m */; };
+		86CE89B625B9684900C9B376 /* RegularPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CE89B525B9684900C9B376 /* RegularPrice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +53,14 @@
 		86459F5425B5B3BF00230C76 /* Rental.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rental.m; sourceTree = "<group>"; };
 		86459F5825B5B4D800230C76 /* Customer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 		86459F5925B5B4D800230C76 /* Customer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		86CE89A525B9680500C9B376 /* Price.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Price.h; sourceTree = "<group>"; };
+		86CE89A625B9680500C9B376 /* Price.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Price.m; sourceTree = "<group>"; };
+		86CE89AA25B9683900C9B376 /* ChildrenPrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildrenPrice.h; sourceTree = "<group>"; };
+		86CE89AB25B9683900C9B376 /* ChildrenPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildrenPrice.m; sourceTree = "<group>"; };
+		86CE89AF25B9684300C9B376 /* NewReleasePrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewReleasePrice.h; sourceTree = "<group>"; };
+		86CE89B025B9684300C9B376 /* NewReleasePrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewReleasePrice.m; sourceTree = "<group>"; };
+		86CE89B425B9684900C9B376 /* RegularPrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegularPrice.h; sourceTree = "<group>"; };
+		86CE89B525B9684900C9B376 /* RegularPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegularPrice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,7 @@
 		86459F4625B5B31400230C76 /* 第一章 */ = {
 			isa = PBXGroup;
 			children = (
+				86CE89A425B967F300C9B376 /* MoviePrice */,
 				86459F4725B5B31400230C76 /* main.m */,
 				0DFE8C3E25B5F5E9002C54B9 /* TestCase.h */,
 				0DFE8C3F25B5F5E9002C54B9 /* TestCase.m */,
@@ -109,6 +122,21 @@
 				86459F5925B5B4D800230C76 /* Customer.m */,
 			);
 			path = "第一章";
+			sourceTree = "<group>";
+		};
+		86CE89A425B967F300C9B376 /* MoviePrice */ = {
+			isa = PBXGroup;
+			children = (
+				86CE89A525B9680500C9B376 /* Price.h */,
+				86CE89A625B9680500C9B376 /* Price.m */,
+				86CE89AA25B9683900C9B376 /* ChildrenPrice.h */,
+				86CE89AB25B9683900C9B376 /* ChildrenPrice.m */,
+				86CE89AF25B9684300C9B376 /* NewReleasePrice.h */,
+				86CE89B025B9684300C9B376 /* NewReleasePrice.m */,
+				86CE89B425B9684900C9B376 /* RegularPrice.h */,
+				86CE89B525B9684900C9B376 /* RegularPrice.m */,
+			);
+			path = MoviePrice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +226,11 @@
 			files = (
 				86459F5525B5B3BF00230C76 /* Rental.m in Sources */,
 				86459F5025B5B32900230C76 /* Movie.m in Sources */,
+				86CE89B125B9684300C9B376 /* NewReleasePrice.m in Sources */,
 				0DFE8C4025B5F5E9002C54B9 /* TestCase.m in Sources */,
+				86CE89AC25B9683900C9B376 /* ChildrenPrice.m in Sources */,
+				86CE89B625B9684900C9B376 /* RegularPrice.m in Sources */,
+				86CE89A725B9680500C9B376 /* Price.m in Sources */,
 				86459F4825B5B31400230C76 /* main.m in Sources */,
 				86459F5A25B5B4D800230C76 /* Customer.m in Sources */,
 			);

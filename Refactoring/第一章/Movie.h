@@ -21,6 +21,8 @@ typedef NS_ENUM(NSUInteger, MovieType) {
 @property (nonatomic, assign) MovieType priceCode;
 
 - (instancetype)initWithTitle:(NSString *)title priceCode:(MovieType)priceCode;
+- (int)getFrequentRenterPoints:(int)daysRented;
+- (double)getCharge:(int)daysRented;
 @end
 
 NS_ASSUME_NONNULL_END

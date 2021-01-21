@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Rental : NSObject
 
 @property (nonatomic, strong, readonly) Movie *movie;
-@property (nonatomic, assign, readonly) NSInteger daysRented;
+@property (nonatomic, assign, readonly) int daysRented;
 
 - (instancetype)initWithMovie:(Movie *)movie daysRented:(NSInteger)daysRented;
 - (double)getCharge;
