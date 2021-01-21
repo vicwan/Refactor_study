@@ -39,4 +39,11 @@
     return result;
 }
 
+- (int)getFrequentRenterPoints {
+    if (self.movie.priceCode == MovieTypeNewRelease && self.daysRented > 1) {
+        return 2;
+    }
+    return 1;
+}
+
 @end

@@ -25,26 +25,33 @@
 }
 
 - (NSString *)statement {
-    double totalAmount = 0;
-    int frequentRenterPoints = 0;
     NSString *result = [NSString stringWithFormat:@"\n*****\n\nRental Record for %@\n", self.name];
     
     for (Rental *r in self.rentals) {
-        
-        // add frequent renter points
-        frequentRenterPoints ++;
-        // add bonus for a two day new release rental
-        if (r.movie.priceCode == MovieTypeNewRelease && r.daysRented > 1) {
-            frequentRenterPoints ++;
-        }
         // show figures for this rental
         result = [result stringByAppendingFormat:@"\t%@\t%.2f\n", r.movie.title, [r getCharge]];
-        totalAmount += [r getCharge];
     }
     // add footer lines
-    result = [result stringByAppendingFormat:@"Amount owed is %.2f\n", totalAmount];
-    result = [result stringByAppendingFormat:@"You earned %d frequent renter points\n\n*****", frequentRenterPoints];
+    result = [result stringByAppendingFormat:@"Amount owed is %.2f\n", [self getTotalCharge]];
+    result = [result stringByAppendingFormat:@"You earned %d frequent renter points\n\n*****", [self getTotalFrequentPoints]];
     return result;
+}
+
+#pragma mark - Private
+- (double)getTotalCharge {
+    double ret = 0;
+    for (Rental *r in self.rentals) {
+        ret += [r getCharge];
+    }
+    return ret;
+}
+
+- (int)getTotalFrequentPoints {
+    int ret = 0;
+    for (Rental *r in self.rentals) {
+        ret += [r getFrequentRenterPoints];
+    }
+    return ret;
 }
 
 @end

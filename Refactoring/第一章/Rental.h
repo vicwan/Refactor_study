@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithMovie:(Movie *)movie daysRented:(NSInteger)daysRented;
 - (double)getCharge;
+- (int)getFrequentRenterPoints;
 @end
 
 NS_ASSUME_NONNULL_END
